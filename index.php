@@ -26,8 +26,8 @@
         <?php
         $res = mysqli_query($conn, "SELECT * FROM productos");
         while($p = mysqli_fetch_assoc($res)): ?>
-            <div class="card">
-                <img src="img/<?php echo $p['imagen_url']; ?>" alt="item">
+            <div class="card"><img src="assets/<?php echo $p['imagen_url']; ?>" alt="item">
+                
                 <h3><?php echo $p['nombre_producto']; ?></h3>
                 <p class="price"><?php echo number_format($p['precio_producto'], 0); ?> PTAS</p>
                 <form action="acciones.php" method="POST">
